@@ -123,6 +123,4 @@ configs/
 
 ---
 
-
-If you want me to also drop a ready-to-go `.vscode/` folder (launch configs for the loop and dashboard), say the word and I’ll add it.
-```
+#

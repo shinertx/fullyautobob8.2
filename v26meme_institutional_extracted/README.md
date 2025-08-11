@@ -71,7 +71,7 @@ All events stream to `logs/events.ndjson`.
 * **.env keys:** (paper needs none)
 
   * `ENV`, `DATA_DIR`, `LOG_DIR`, `STATE_DIR`
-  * Optional exchange keys (for future live): `BINANCE_*`, `COINBASE_*`
+  * Optional exchange keys (for future live): `KRAKEN_*`, `COINBASE_*` (Coinbase passphrase not required)
   * Optional `OPENAI_API_KEY` (LLMs never in hot path)
 
 ---
@@ -124,3 +124,4 @@ configs/
 ---
 
 #
+`````

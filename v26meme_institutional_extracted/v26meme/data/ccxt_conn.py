@@ -1,10 +1,9 @@
-
 from __future__ import annotations
 import ccxt
 import pandas as pd
 from typing import List
 
-def fetch_ohlcv(symbol: str, timeframe: str="1m", limit: int=500, exchange_id: str="binance"):
+def fetch_ohlcv(symbol: str, timeframe: str="1m", limit: int=500, exchange_id: str="kraken"):
     ex = getattr(ccxt, exchange_id)()
     ohlcv = ex.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
     df = pd.DataFrame(ohlcv, columns=["ts","open","high","low","close","volume"])

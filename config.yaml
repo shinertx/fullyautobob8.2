@@ -1,0 +1,43 @@
+
+env: dev
+data_dir: ./data
+log_dir: ./logs
+state_dir: ./state
+
+paper:
+  starting_equity: 200.0
+  fees_bps: 10            # 0.10% each side
+  slippage_bps: 15        # baseline slippage (bps)
+  latency_ms: 500
+  symbols: ["BTC/USDT", "ETH/USDT", "SOL/USDT", "ADA/USDT", "DOGE/USDT"]
+  timeframe: "1m"
+  synthetic: true         # if true, use synthetic generator
+
+allocator:
+  kelly_fraction_min: 0.5
+  kelly_fraction_max: 1.5
+  exploration: 0.25      # exploration weight in bandit
+  theme_caps:
+    listings: 0.3
+    round_number: 0.3
+    momentum: 0.4
+    mean_revert: 0.4
+    correlation_filter: 0.4
+
+risk:
+  daily_dd_limit: 0.1
+  portfolio_dd_limit: 0.25
+  reserve_fraction_min: 0.2
+  reserve_fraction_max: 0.4
+
+sleeves:
+  core_weight: 0.7
+  turbo_weight: 0.3
+  turbo_greenlight_threshold: 0.7
+
+execution:
+  adv_cap_fraction: 0.02
+  min_fill_prob: 0.4
+  circuit_slippage_bps: 40
+  circuit_fillrate: 0.3
+  circuit_var_ceiling: 0.04
